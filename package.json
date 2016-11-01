@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "google-closure-compiler-js": "^20160828.0.1",
+    "rollup": "^0.34.13",
+    "rollup-plugin-closure-compiler-js": "^1.0.2"
+  },
+  "scripts": {
+    "rollup": "rollup -c rollup-config-standard.js",
+    "closure": "rollup -c rollup-config-closure.js"
+  }
+}
