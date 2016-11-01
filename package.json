@@ -1,11 +1,15 @@
 {
   "devDependencies": {
     "google-closure-compiler-js": "^20160828.0.1",
+    "lite-server": "^2.2.2",
     "rollup": "^0.34.13",
     "rollup-plugin-closure-compiler-js": "^1.0.2"
   },
   "scripts": {
     "rollup": "rollup -c rollup-config-standard.js",
-    "closure": "rollup -c rollup-config-closure.js"
+    "closure": "rollup -c rollup-config-closure.js",
+    "build": "npm run rollup && npm run closure",
+    "start-closure": "lite-server -c bs-config-closure.js",
+    "start-standard": "lite-server -c bs-config-closure.js"
   }
 }
