@@ -16,6 +16,12 @@ class PersonService {
   }
 }
 
+class CustomerService {
+  getCustomer() {
+    return {firstName: 'Joe', lastName: 'Smith'};
+  }
+}
+
 class Main {
   greet() {
     let greetingService = new GreetingService();

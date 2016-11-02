@@ -8,7 +8,8 @@
   "scripts": {
     "rollup": "rollup -c rollup-config-standard.js",
     "closure": "rollup -c rollup-config-closure.js",
-    "build": "npm run rollup && npm run closure",
+    "no-tree-shaking": "rollup -c rollup-config-no-tree-shaking.js",
+    "build": "npm run rollup && npm run closure && npm run no-tree-shaking",
     "start-closure": "lite-server -c bs-config-closure.js",
     "start-standard": "lite-server -c bs-config-closure.js"
   }
