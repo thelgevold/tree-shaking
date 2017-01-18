@@ -11,6 +11,10 @@
     "no-tree-shaking": "rollup -c rollup-config-no-tree-shaking.js",
     "build": "npm run rollup && npm run closure && npm run no-tree-shaking",
     "start-closure": "lite-server -c bs-config-closure.js",
-    "start-standard": "lite-server -c bs-config-closure.js"
+    "start-standard": "lite-server -c bs-config-closure.js",
+    "build-main1": "rollup -c ./module-size-and-tree-shaking/rollup-config.js -i module-size-and-tree-shaking/main1.js -o dist/multi-module1.js",
+    "build-main2": "rollup -c ./module-size-and-tree-shaking/rollup-config.js -i module-size-and-tree-shaking/main2.js -o dist/multi-module2.js",
+    "build-main3": "rollup -c ./module-size-and-tree-shaking/rollup-config.js -i module-size-and-tree-shaking/main3.js -o dist/multi-module3.js",
+    "build-multi-modules": "npm run build-main1 && npm run build-main2 && npm run build-main3"
   }
 }
