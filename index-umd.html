@@ -1,0 +1,32 @@
+<html>
+
+  <head>
+    
+    <script src="dist/car-iife.js"></script>
+    <script src="dist/car-umd.js"></script>
+  
+    <script>
+      var carServiceIIFE = new carModule_IIFE.CarService();
+      console.log(carServiceIIFE.getCarBrands());
+    </script>
+
+    <script>
+      var carServiceUMD = new carModule_UMD.CarService();
+      console.log(carServiceUMD.getCarBrands());
+    </script>
+
+    <script data-main="dist/car-umd" src="node_modules/requirejs/require.js"></script>
+
+    <script>
+      requirejs(["car-umd"], function(CarModuleAMD) {
+        var carServiceAMD = new CarModuleAMD.CarService();
+        console.log(carServiceAMD.getCarBrands());
+      });
+    </script>
+  </head>
+
+  <body>
+ 
+  </body>
+
+</html>

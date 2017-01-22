@@ -15,6 +15,13 @@
     "build-main1": "rollup -c ./module-size-and-tree-shaking/rollup-config.js -i module-size-and-tree-shaking/main1.js -o dist/multi-module1.js",
     "build-main2": "rollup -c ./module-size-and-tree-shaking/rollup-config.js -i module-size-and-tree-shaking/main2.js -o dist/multi-module2.js",
     "build-main3": "rollup -c ./module-size-and-tree-shaking/rollup-config.js -i module-size-and-tree-shaking/main3.js -o dist/multi-module3.js",
-    "build-multi-modules": "npm run build-main1 && npm run build-main2 && npm run build-main3"
+    "build-multi-modules": "npm run build-main1 && npm run build-main2 && npm run build-main3",
+    "build-car-bundle": "rollup -c umd/rollup-umd.js && rollup -c umd/rollup-iife.js",
+    "start-car-bundle": "lite-server -c bs-config-umd.js"
+  },
+  "dependencies": {
+    "install": "^0.8.4",
+    "npm": "^4.1.1",
+    "requirejs": "^2.3.2"
   }
 }
