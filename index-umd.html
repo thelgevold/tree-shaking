@@ -18,7 +18,7 @@
     <script data-main="dist/car-umd" src="node_modules/requirejs/require.js"></script>
 
     <script>
-      requirejs(["car-umd"], function(CarModuleAMD) {
+      require(["car-umd"], function(CarModuleAMD) {
         var carServiceAMD = new CarModuleAMD.CarService();
         console.log(carServiceAMD.getCarBrands());
       });
